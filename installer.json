@@ -1,0 +1,13 @@
+{
+  "version": "0.1",
+  "name": "pinipigFetcher",
+  "pluginVersion": "0.0.1",
+  "folderName": "fetcher",
+  "devDependencies": [],
+  "scripts": [],
+  "dependencies": ["es6-promise", "isomorphic-fetch"],
+  "repository": "https://github.com/jmdisuanco/pinipig-plugin-fetcher",
+  "requiredPlugins": [],
+  "route": "",
+  "model": ""
+}
