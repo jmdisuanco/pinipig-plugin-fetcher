@@ -14,6 +14,15 @@ const fetcher = require('plugins/fetcher')
 const post = fetcher('https://api.server.com/posts') //instantiate
 
 post('list').then((res) => console.log(res))
+
+//or async pattern
+
+const logList = async () => {
+  let postList = await post('list')
+  console.log(postList)
+}
+
+logList()
 ```
 
 to instanciate and api endpint
