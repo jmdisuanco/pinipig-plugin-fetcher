@@ -7,6 +7,7 @@
  */
 require('es6-promise').polyfill()
 require('isomorphic-fetch')
+
 const Fetch = async (method, url, body, options = null) => {
   options != null
     ? null
@@ -21,7 +22,11 @@ const Fetch = async (method, url, body, options = null) => {
         body: JSON.stringify(body),
       })
   const response = await fetch(url, options)
-  return await response.json()
+  if (response.ok) {
+    return await response.json()
+  } else {
+    return JSON.stringify(response)
+  }
 }
 
 module.exports = Fetch
